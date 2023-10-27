@@ -1,0 +1,42 @@
+Class in JS
+    - constructor
+    - setter / getter
+    - variables and functions
+    - 'this' keyword
+
+Prototype
+Prototypal Inheritance in JS
+
+
+Function - block of code that are reusable.
+
+Class - Class has all necessary functions and other properties that are relevant to it in order to perform the task.
+
+class Car{
+    color = '';
+    brand = '';
+    model = '';
+    variant = '';
+
+    getSpeed = () => {
+
+    }
+    getFuelLevel = () => {
+
+    }
+}
+
+
+class Employee{
+    id = '';
+    name = '';
+    designation = '';
+    experience = '';
+    domain = '';
+
+    getCurrentYearPerformance = () => {};
+
+    getProjectDetails = () => {
+        
+    }
+}
