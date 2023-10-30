@@ -1,0 +1,50 @@
+// To get Uber Price:
+
+
+// To book a ride
+// fromLocation.
+// toLocation.
+// tripDistance.
+// typeOfCab
+// couponCode - RIDE10, RIDE20, RIDE30 
+
+class Uber{
+    constructor(fromLocation, toLocation, tripDistance, typeofCab, couponCode){
+        this.fromLocation = fromLocation;
+        this.toLocation = toLocation;
+        this.tripDistance = tripDistance;
+        this.typeOfCab = typeOfCab;
+        this.couponCode = couponCode;
+    }
+
+    getPricePerKM = () => {
+        if(typeOfCab == 'Sedan'){
+            this.pricePerKM = 20;
+        }
+        if(typeOfCab == 'SUV'){
+            this.pricePerKM = 27;
+        }
+        if(typeOfCab == 'Auto'){
+            this.pricePerKM = 15;
+        }
+    }
+
+    getDiscount = () => {
+        if(this.couponCode == 'RIDE10'){
+            this.discount = 10;
+        }
+        if(this.couponCode == 'RIDE20'){
+            this.discount = 20;
+        }
+        if(this.couponCode == 'RIDE30'){
+            this.discount = 30;
+        }
+    }
+
+    getRidePrice = () => {
+        let totalPrice =  this.tripDistance * this.pricePerKM;
+        let priceAfterDiscount = totalPrice  - ((this.discount / 100 ) * totalPrice);
+        return priceAfterDiscount
+    }
+
+}

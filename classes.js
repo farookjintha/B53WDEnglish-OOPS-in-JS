@@ -1,5 +1,5 @@
 // class User {
-//   constructor(name, email, city, mobileNumber, planName) {
+//   constructor(name, email, city, mobileNumber) {
 //     //logic
 //     this.name = name;
 //     this.email = email;
@@ -80,7 +80,7 @@
 // functions and variables -> camelCase -> getEmployeeDetails
 
 class Car {
-  constructor(name, brand, model, variant, color, kind) {
+  constructor(name, brand, model, variant, color, kind = "Hatchback") {
     this.name = name;
     this.brand = brand;
     this.model = model;
@@ -116,6 +116,7 @@ let cretaObj = new Car(
   "Black",
   "SUV"
 );
+console.log("Kind of car: ", cretaObj.kind);
 
 console.log("Fuel at First: ", cretaObj.fuelLevel);
 
@@ -140,3 +141,12 @@ cretaObj.setFuel(10);
 console.log("Getting Fuel after Filled: ", cretaObj.fuelLevel);
 
 console.log(cretaObj.isTankFull ? "My Tank is Full" : "My Tank is not full");
+
+let i20Obj = new Car(
+  "Hyundai i20",
+  "Hyundai",
+  "Sportz",
+  "1.2 Kappa Engine",
+  "White"
+);
+console.log("i20 Obj: ", i20Obj.kind);
