@@ -48,3 +48,26 @@ class Uber{
     }
 
 }
+
+
+
+// Tasks using Array Methods 
+
+Print the country that uses US dollars as currency.
+
+let countriesWithUSD = [];
+
+response.forEach((country, index) => {
+    let currencies = Object.keys(country.currencies); // Object.keys will give the keys in an obj in the array.
+    let isUSDExists = currencies.some((currency) => {
+        return currency == 'USD'
+    });
+
+    if(isUSDExists){
+        countriesWithUSD.push(country);
+    }
+})
+
+countriesWithUSD.forEach((countryWithUSD) => {
+    console.log(countryWithUSD.name.common)
+})
